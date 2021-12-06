@@ -12,15 +12,16 @@
 <body>
 
 
-    <header>
-        <h1 class="page-title">
+    <header class ="header">
+        <h1>
             Maximilian Stump
         </h1>
         <nav>
             <ul>
-                <li> <a href =#about>About Me</a></li>
-                <li> <a href =#work>Work</a></li>
-                <li> <a href =#contact>Contact Me</a></li>
+                <!-- may need to chane to classes -->
+                <li> <a href ="#about">About Me</a></li>
+                <li> <a href ="#work">Work</a></li>
+                <li> <a href ="#contact">Contact Me</a></li>
                 <li> <a href ="resume">Resume</a></li>
             </ul>
         </nav>
@@ -45,30 +46,20 @@
             <section class="first">
                 <h2>Work</h2>
             </section>
-            <section class="second">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsa rerum ullam eius excepturi
-                    minus ducimus molestiae repellat in, earum alias commodi deleniti, eos a cum. Expedita voluptate
-                    sapiente tempore?
-                    Ut enim blanditiis corporis accusantium corrupti tempora, debitis eos quaerat culpa voluptate
-                    dolorum, nulla earum! Asperiores odit ullam dolore dolor beatae dolorem qui accusamus itaque,
-                    ducimus delectus voluptate nemo quod!
-                    Sunt voluptatibus vero obcaecati? Harum commodi incidunt necessitatibus, voluptate tempore minima
-                    nostrum. Numquam laborum facere, nulla ipsam facilis accusantium officiis labore ad voluptate
-                    doloremque itaque cum ducimus atque omnis architecto?
-                    Illum aut laudantium at aperiam provident veritatis doloribus hic nisi sed animi perspiciatis quasi
-                    amet consectetur, minima, sapiente similique incidunt eum. Sequi sint voluptate eius qui nisi ad,
-                    natus maiores!
-                    Aspernatur animi non illum quam fuga soluta nostrum officia quis dolorem sit molestiae quos repellat
-                    perspiciatis, quibusdam consectetur aliquid reprehenderit laboriosam! Maiores tempore eius eaque
-                    vero quasi voluptatum error repellendus.
-                </p>
+            <section class="second" id="work">
+                <!-- Use css psuedo selectors for sizing? Then add effects -->
+                <!-- <figure><img src="./assets/images/core-conf.png" alt="Core Configuration"></figure>
+                <img src="./assets/images/Core.png" alt="Core">
+                <img src="./assets/images/fuel-assem.png" alt="Fuel Assembly"> -->
+                <figure id="conf"></figure>
+                <figure id="core"></figure>
+                <figure id="fuel"></figure>
             </section>
            
             <section class="first">
                 <h2>Contact Me</h2>
             </section>
-            <section class="second">
+            <section class="second" id="contact">
                 <p>555-555-5555</p>
                 <a href ="https://www.linkedin.com/in/maximilian-stump-2aa6b01aa/">LinkedIn</a>
                 <a href="https://github.com/MaxStump13">GitHub</a>

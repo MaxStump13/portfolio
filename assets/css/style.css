@@ -1,3 +1,123 @@
+*{
+  box-sizing: border-box;
+}
+.header{
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #2a607c;
+  /* display: flex;
+   */
+ 
+}
+
+/* .header h1{
+  font-size: 48px;
+  flex: 3;
+}
+
+.header nav{
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.header nav ul li{
+  flex: 1;
+  list-style-type: none;
+  display: inline-block;
+}
+   */
+
+
+   /* use flex for nav at top and bottom? 
+   Look at act 24 for flex nav bar*/
+
+
+ .header h1{
+  display: inline-block;
+  font-size: 48px;
+}
+
+.header nav{
+  float: right;
+  padding-top: 15px;
+  margin-right: 20px;
+  font-size: 20px;
+
+}
+
+.header nav ul{
+  list-style-type: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* display:inline-block;*/
+}
+
+
+
+.header nav ul li{
+  display:inline-block;
+} 
+
+#work figure:hover{
+  /* sizing of images first full length others split half width use media to change them all the same size* ussing selectors*/
+  /* put a box shadow on all images so they are faded until hovered on, then none */
+     filter:none;
+  
+}
+#work{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+#conf{
+  height:400px;
+  width:100%;
+  /* margin-bottom: 10px; */
+  background-image: url("../images/core-conf.png");
+  margin: 10px 0px;
+  border:5px solid lightblue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter:blur(4px);
+
+}
+
+#core{
+  height:200px;
+  width:48%;
+  /* margin-bottom: 10px; */
+  background-image: url("../images/Core.png");
+  margin: 10px 0px;
+  border:5px solid lightblue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter:blur(4px);
+}
+
+#fuel{
+  height:200px;
+  width:48%;
+  /* margin-bottom: 10px; */
+  background-image: url("../images/fuel-assem.png");
+  margin: 10px 0px;
+  border:5px solid lightblue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter:blur(4px);
+}
+
+#contact{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contact a,#contact p{
+  text-decoration: underline;
+  text-decoration-color: #2a607c;
+}
+
 div{
   display:flex;
   flex-wrap: wrap;
@@ -11,20 +131,24 @@ flex:1 15%;
 text-align:right;
 margin-bottom: 15px;;
 border-right: 5px solid black;
+padding-right: 2px;
 }
 .second{
 background-color: chartreuse;
 flex:1 83%;
 /* flex-basis:68%; */
 margin-bottom: 15px;
+margin-left: 10px;
 }
 @media (max-width:768px){
   .first{
       flex: 0 0 100%;
       text-align: center;
       border-right:none;
+      padding:auto;
   }
   .second{
       flex: 0 0 100%;
+      margin:auto;
   }
 }
