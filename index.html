@@ -10,71 +10,78 @@
 </head>
 
 <body>
-
-
-    <header class ="header">
+    <header class="header">
         <h1>
             Maximilian Stump
         </h1>
         <nav>
             <ul>
-                <!-- may need to chane to classes -->
-                <li> <a href ="#about">About Me</a></li>
-                <li> <a href ="#work">Work</a></li>
-                <li> <a href ="#contact">Contact Me</a></li>
-                <li> <a href ="resume">Resume</a></li>
+                <li> <a href="#about">About Me</a></li>
+                <li> <a href="#work">Work</a></li>
+                <li> <a href="#contact">Contact Me</a></li>
+                <li> <a href="../portfolio/assets/images/Maximilian Stump Resume.pdf">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <figure>
-<!-- import css background picture of me for banner -->
-    </figure>
 
+    <section id="container-banner">
+    <figure id="fence"></figure>
+    <h3>This is my page!</h3>
+    </section>
     <main>
-        <div>
-            <section class="first">
-                <h2>About Me</h2>
-            </section>
-            <section class="second">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ducimus velit minima iusto itaque ullam
-                    tempore eaque repellendus soluta, iure consectetur veritatis ab quos officia? Sunt nostrum
-                    perferendis
-                    cumque nesciunt!
-                </p>
-            </section>
-            <section class="first">
-                <h2>Work</h2>
-            </section>
-            <section class="second" id="work">
-                <!-- Use css psuedo selectors for sizing? Then add effects -->
-                <!-- <figure><img src="./assets/images/core-conf.png" alt="Core Configuration"></figure>
-                <img src="./assets/images/Core.png" alt="Core">
-                <img src="./assets/images/fuel-assem.png" alt="Fuel Assembly"> -->
+        <section class="first">
+            <h2>About Me</h2>
+        </section>
+        <section class="second">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ducimus velit minima iusto itaque ullam
+                tempore eaque repellendus soluta, iure consectetur veritatis ab quos officia? Sunt nostrum
+                perferendis
+                cumque nesciunt!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium voluptates quae totam
+                doloremque omnis eius quo voluptatem nemo, dolor nesciunt veritatis dolores aspernatur sit officia
+                quia architecto rerum quisquam iusto.
+            </p>
+        </section>
+        <section class="first">
+            <h2>Work</h2>
+        </section>
+        <section class="second" id="work">
+            <section class="container-full">
                 <figure id="conf"></figure>
+                <h4>Configuration</h4>
+            </section>
+            <section class="container-half">
                 <figure id="core"></figure>
+                <h4>Core</h4>
+            </section>
+            <section class="container-half">
                 <figure id="fuel"></figure>
+                <h4>Fuel</h4>
             </section>
-           
-            <section class="first">
-                <h2>Contact Me</h2>
+            <section class="container-half">
+                <figure id="space"></figure>
+                <h4>Space</h4>
             </section>
-            <section class="second" id="contact">
-                <p>555-555-5555</p>
-                <a href ="https://www.linkedin.com/in/maximilian-stump-2aa6b01aa/">LinkedIn</a>
-                <a href="https://github.com/MaxStump13">GitHub</a>
-                <p>Spotify</p>
-                <p>Twitter</p>
+            <section class="container-half">
+                <figure id="sun"></figure>
+                <h4>Sun</h4>
             </section>
-            
+        </section>
 
-        </div>
+        <section class="first">
+            <h2>Contact Me</h2>
+        </section>
+        <section class="second" id="contact">
+            <p>555-555-5555</p>
+            <a href="https://www.linkedin.com/in/maximilian-stump-2aa6b01aa/">LinkedIn</a>
+            <a href="https://github.com/MaxStump13">GitHub</a>
+            <p>Spotify</p>
+            <p>Twitter</p>
+        </section>
     </main>
-
-
-    <footer>
-
-    </footer>
 
 </body>
 
