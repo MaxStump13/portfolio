@@ -9,11 +9,11 @@
 
 html{
   scroll-behavior: smooth;
-  background-color: whitesmoke;
+  background-color: #e3e3e3;
 }
 
 .header{
-  padding: 0px 20px 0px 0px;
+  padding: 0px 15px 0px 0px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #202529;
 }
@@ -54,11 +54,11 @@ header nav ul{
 }
 
 h2{
-  font-size:32px;
+  font-size:30px;
   color:var(--darkblue);
 }
 
-#work figure:hover{
+#work a:hover{
      filter:none;
 }
 
@@ -78,6 +78,15 @@ h2{
   right: 20px;
   background-color: var(--lightblue);
   font-size: 24px;
+  padding: 7px;
+}
+
+.float-left{
+  position:absolute;
+  bottom:5%;
+  left: 5%;
+  height:250px;
+  float: left;
 }
 
 #fence{
@@ -89,13 +98,20 @@ h2{
   margin: 8px 0px 10px -8px;
 }
 
-.container-full h4, .container-half h4{
+.text-bl{
   position: absolute;
-  bottom: -2%; 
+  bottom: 5%; 
   left:-5px;
   background-color: lightblue;
+  padding: 0px 5px;
+}
+
+.text-bl h4{
+  margin:5px 0px;
   font-size: 18px;
-  padding: 10px 10px;
+}
+.text-bl p{
+  margin-bottom: 3px;
 }
 
 .container-full{
@@ -125,10 +141,10 @@ h2{
   filter:blur(2px);
 }
 
-#core{
+#refactor{
   height:200px;
   width:100%;
-  background-image: url("../images/Core.png");
+  background-image: url("../images/horiseon-screenshot.png");
   margin: 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,20 +161,20 @@ h2{
   filter:blur(2px);
 }
 
-#space{
+#landing{
   height:200px;
   width:100%;
-  background-image: url("../images/space.jpeg");
+  background-image: url("../images/landing.png");
   margin: 0px;
   background-size: cover;
   background-repeat: no-repeat;
   filter:blur(2px);
 }
 
-#sun{
+#vortex{
   height:200px;
   width:100%;
-  background-image: url("../images/sun.jpeg");
+  background-image: url("../images/vortex.jpg");
   margin: 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -183,7 +199,7 @@ main{
   display:flex;
   flex-wrap: wrap;
   margin:96%;
-  margin: 0px 5px;
+  margin: 0px 10px;
 }
 
 h2, p{
@@ -191,7 +207,7 @@ h2, p{
 }
 
 .first{
-flex:1 15%; 
+flex:1 16%; 
 text-align:right;
 margin-top:10px;
 margin-bottom: 15px;;
@@ -200,7 +216,7 @@ padding-right: 10px;
 }
 
 .second{
-flex:1 83%;
+flex:1 81%;
 margin-top: 10px;
 margin-bottom: 15px;
 margin-left: 10px;
