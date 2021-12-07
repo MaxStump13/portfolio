@@ -16,10 +16,10 @@
         </h1>
         <nav>
             <ul>
-                <li> <a href="#about">About Me</a></li>
-                <li> <a href="#work">Work</a></li>
-                <li> <a href="#contact">Contact Me</a></li>
-                <li> <a href="../portfolio/assets/images/Maximilian Stump Resume.pdf" target="_blank"
+                <li> <a href="#about" alt ="Navigation to About Me section">About Me</a></li>
+                <li> <a href="#work" alt ="Navigation to Work section">Work</a></li>
+                <li> <a href="#contact" alt ="Navigation to Contact Me section">Contact Me</a></li>
+                <li> <a href="../portfolio/assets/images/Maximilian Stump Resume.pdf" alt ="Navigation to Resume in new tab" target="_blank"
                         rel="noreferrer noopener">Resume</a></li>
             </ul>
         </nav>
@@ -31,9 +31,11 @@
         <h3>This is my portfolio!</h3>
     </section>
     <main>
+        <!-- First flexbox in row 1 -->
         <section class="first">
             <h2>About Me</h2>
         </section>
+        <!-- Second flexbox in row 1 -->
         <section class="second">
             <p>
                 Hello, this is my portfolio of my projects. My name is Maximilian, but I go by Max. I graduated from
@@ -52,61 +54,77 @@
                 functionality.
             </p>
         </section>
+        <!-- First flex box in row 2 -->
         <section class="first">
             <h2>Work</h2>
         </section>
-
+        <!-- Second flexbox in row 2 with nested flexboxes inside. ID work creates flexbox for images and container-full creates
+        flexbox for each individual image to take full space alloted (this image is full width of second flexbox) -->
         <section class="second" id="work">
             <section class="container-full">
+                <!-- Makes image clickable to proejct and opens in new tab -->
                 <a href="../portfolio/assets/images/WINDSOR POND UNIT 1 RELOAD CORE DESIGN.pdf"
                     alt="Core fuel loading configuration" target="_blank" id="conf"></a>
+                    <!-- Adds text box caption over image-->
                 <article class="text-bl">
                     <h4>Nuclear Core Configuration</h4>
                     <p>Unix Simulations</p>
                 </article>
             </section>
-
+            <!-- 1st image/flexbox in Second row of nested flexbox in class second, only takes half of the width until screen shrinks -->
             <section class="container-half">
+                <!-- Makes image clickable to proejct and opens in new tab -->
                 <a href="https://maxstump13.github.io/refactor-horiseon/" alt="Refactoring project with HTML/CSS"
                     target="_blank" id="refactor"></a>
+                    <!-- Adds text box caption over image-->
                 <article class="text-bl">
                     <h4>Horiseon Refacor</h4>
                     <p>HTML/CSS</p>
                 </article>
             </section>
+            <!-- 2nd image/flexbox in Second row of nested flexbox in class second, only takes half of the width, until screen shrinks -->
             <section class="container-half">
+                <!-- Makes image clickable to proejct and opens in new tab -->
                 <a href="../portfolio/assets/images/SafetyAnalysisReportGroup6-1.docx.pdf"
                     alt="Safety analysis report for fuel" target="_blank" id="fuel"></a>
+                    <!-- Adds text box caption over image-->
                 <article class="text-bl">
                     <h4>Nuclear Fuel</h4>
                     <p>Safety Calulations</p>
                 </article>
             </section>
+            <!-- 1st image/flexbox in third row of nested flexbox in class second, only takes half of the width, until screen shrinks -->
             <section class="container-half">
+                <!-- Makes image clickable to proejct and opens in new tab -->
                 <a href="https://maxstump13.github.io/landing-page/"
                     alt="First mini project for timed landing page creation" target="_blank" id="landing"></a>
+                    <!-- Adds text box caption over image -->
                 <article class="text-bl">
                     <h4>Landing Page</h4>
                     <p>HTML/CSS</p>
                 </article>
             </section>
+            <!-- 2nd image/flexbox in third row of nested flexbox in class second, only takes half of the width, until screen shrinks -->
             <section class="container-half">
-                <a href="../portfolio/assets/images/Presentation.pdf" alt="Vortex Rings" target="_blank"
+                <!-- Makes image clickable to proejct and opens in new tab -->
+                <a href="../portfolio/assets/images/Presentation.pdf" alt="Vortex ring cannon project" target="_blank"
                     id="vortex"></a>
+                    <!-- Adds text box caption over image-->
                 <article class="text-bl">
                     <h4>Vortex Cannon</h4>
                     <p>Thermodynamics</p>
                 </article>
             </section>
         </section>
-
+        <!-- First flex box in row 3 -->
         <section class="first">
             <h2>Contact Me</h2>
         </section>
+        <!-- Second flexbox in row 1, id contact uses another flexbox to align list items evenly and switch vertically at small screens -->
         <section class="second" id="contact">
             <p>555-555-5555</p>
-            <a href="https://www.linkedin.com/in/maximilian-stump-2aa6b01aa/">LinkedIn</a>
-            <a href="https://github.com/MaxStump13">GitHub</a>
+            <a href="https://www.linkedin.com/in/maximilian-stump-2aa6b01aa/" alt="My linkedIn profile">LinkedIn</a>
+            <a href="https://github.com/MaxStump13" alt = "My GitHub profile">GitHub</a>
             <p>stumpmaximilian@gmail.com</p>
             <p>stump@website.com</p>
         </section>

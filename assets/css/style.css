@@ -1,275 +1,272 @@
+/* Allows for height and width to be used */
 *{
   box-sizing: border-box;
 }
-
+/* pseudo class to define custom dark blue text color variable*/
 :root{
-  --lightblue:lightblue;
   --darkblue:rgb(0, 0, 82);
+  --fadedBlack:#202529;
 }
-
+/* Creates scrolling animation when headers in nav are clicked*/
 html{
   scroll-behavior: smooth;
   background-color: #e3e3e3;
 }
-
+/* Using custom faded black from :root as backgound of header */
 .header{
   padding: 0px 15px 0px 0px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #202529;
+  background-color: var(--fadedBlack);
+}
+/* Applies flex to each of the folling */
+header, header nav ul, #work, #contact, .container-half, .container-full, main{
+  display: flex;
+}
+/* Puts all white space around flex between elements */
+header, header nav ul, #work{
+  justify-content: space-between;
+}
+/* Applies wrapping to elements within flex, so they look like a grid */
+#work, .container-full, .container-half, main, #contact{
+  flex-wrap: wrap;
 }
 
 header{
   margin: -8px;
-  display: flex;
-  justify-content: space-between;
 }
-
-header nav{
+/* Centers the items(text) to the center of the flex box */
+header nav, .header h1{
   align-self: center;
 }
-
+/* Removes the bullet points and defines area for the navigation list to occupy, allowing the space-between to seperate list items */
 header nav ul{
-  display:flex;
-  justify-content: space-between;
   min-width: 425px;
   list-style: none;
-  font-size: 24px;
   padding-left: 0px;
+}
+
+header nav ul, #container-banner h3{
+  font-size: 24px;
+}
+
+.header h1, .text-bl, #container-banner h3{
+  background-color: lightblue;
+}
+
+.header h1, .container-half{
+  margin: 10px 0px;
 }
 
 .header h1{
   min-width: 300px;
   text-align: right;
-  background-color: lightblue;
-  margin: 10px 0px;
-  align-self: center;
   padding:10px;
 }
-
-.header a{
+/* Removes the underline from links */
+.header a, #contact a{
   text-decoration: none;
+}
+/* places a better looking underline */
+.header a{
   color: lightblue;
   border-bottom: 3px solid lightblue;
   margin: 10px;
 }
-
+/* Changes text color to custom dark blue from :root */
+h1, h2, h3, h4, .text-bl p, #contact p, #contact a{
+  color:var(--darkblue);
+} 
 h2{
   font-size:30px;
-  color:var(--darkblue);
 }
-
+/* When the mouse hovers over the images in the work section, the blur is removed */
 #work a:hover{
      filter:none;
 }
-
-#work{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-#container-banner{
+/* Allows children to move relative to the elements with these classes/ID*/
+#container-banner, .container-half, .container-full{
   position:relative;
 }
 
 #container-banner h3{
-  position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: var(--lightblue);
-  font-size: 24px;
   padding: 7px;
 }
-
+/* Allows items with this class to move over top their relative parent */
+.float-left,.text-bl, #container-banner h3{
+  position: absolute;
+}
+/* Moves box created in class 5% up from the bottom */
+.float-left, .text-bl{
+  bottom: 5%;
+}
+/* Allows for profile picture to sit on top of banner on the left side */
 .float-left{
-  position:absolute;
-  bottom:5%;
   left: 5%;
   height:250px;
   float: left;
+  border: 2px solid var(--fadedBlack);
 }
-
+/* places banner picture with specified dimmensions */
 #fence{
   background-image: url("../images/fence.jpeg");
   height: 300px;
   width: 102%;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 8px 0px 10px -8px;
 }
-
+/* Sets text box even with picture border */
 .text-bl{
-  position: absolute;
-  bottom: 5%; 
   left:-5px;
-  background-color: lightblue;
   padding: 0px 5px;
+}
+
+.text-bl h4, #contact a, #contact p{
+  font-size: 18px;
 }
 
 .text-bl h4{
   margin:5px 0px;
-  font-size: 18px;
 }
 .text-bl p{
   margin-bottom: 3px;
 }
 
-.container-full{
-  position: relative;
+.container-full, .container-half {
   border: 5px solid lightblue;
-  display: flex;
-  width:100%;
-  flex-wrap: wrap;
 }
-
+/* Allows ids to take up full space available in the container set in parent. Container-full is the entire width of the box, so 100% */
+.container-full, #conf, #refactor, #fuel, #landing, #vortex{
+  width:100%;
+}
+/* Images in this container only take half of width the flex box space in second, 49% to allow space for border, padding and margins */
 .container-half{
-  position: relative;
   width:49%;
-  display:flex;
-  flex-wrap:wrap;
-  border: 5px solid lightblue;
-  margin: 10px 0px;
 }
-
-#conf{
-  height:400px;
-  width:100%;
-  background-image: url("../images/core-conf.png");
-  margin: 0px;
+/* Fixes the images to fill the space available without repeating the image */
+#fence, #conf, #refactor, #fuel, #landing, #vortex{
   background-size: cover;
   background-repeat: no-repeat;
+}
+/* Applies a slight blur to images */
+#conf, #refactor, #fuel, #landing, #vortex{
   filter:blur(2px);
+}
+/* Sets height of images */
+#refactor, #fuel, #landing, #vortex{
+  height: 200px;
+}
+/* Imorpts images for the the second flexbox in the Work row */
+#conf{
+  height:400px;
+  background-image: url("../images/core-conf.png");
 }
 
 #refactor{
-  height:200px;
-  width:100%;
   background-image: url("../images/horiseon-screenshot.png");
-  margin: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter:blur(2px);
 }
 
 #fuel{
-  height:200px;
-  width:100%;
   background-image: url("../images/fuel-assem.png");
-  margin: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter:blur(2px);
 }
 
 #landing{
-  height:200px;
-  width:100%;
   background-image: url("../images/landing.png");
-  margin: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter:blur(2px);
 }
 
 #vortex{
-  height:200px;
-  width:100%;
   background-image: url("../images/vortex.jpg");
-  margin: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter:blur(2px);
 }
-
+/*This is the Contact Me section id made  
+Centers content vertically and spaces list items evenly throughout the flex box */
 #contact{
-  display:flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
 }
-
+/* places blue underline on list items */
 #contact a,#contact p{
-  text-decoration: none;
   border-bottom: 5px solid lightblue;
-  color: black;
-  font-size: 18px;
 }
 
 main{
-  display:flex;
-  flex-wrap: wrap;
   margin:96%;
   margin: 0px 10px;
 }
 
-h2, p{
+h2, p, #conf, #refactor, #fuel, #landing, #vortex{
   margin: 0px;
 }
-
+/* First is the first flexbox in each row, second is the second flexbox of each row */
+.first, .second{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+/* Used percentages for flex-basis to give the second flexbox the majority of horizontal space. Flex grow and shrink set to 1, so they scale evenly*/
 .first{
 flex:1 16%; 
 text-align:right;
-margin-top:10px;
-margin-bottom: 15px;;
 border-right: 5px solid var(--darkblue);
 padding-right: 10px;
 }
 
 .second{
 flex:1 81%;
-margin-top: 10px;
-margin-bottom: 15px;
 margin-left: 10px;
 padding: 5px;
 }
-
+/* At 768px these changes apply */
 @media (max-width:768px){
+  /* Makes vertical divider horizontal and moves header text to left */
   .first{
-      flex: 0 0 100%;
       text-align: left; 
       border-right:none;
-      padding:0px;
       border-bottom: 5px solid lightblue;
   }
-
+  
   .second{
-      flex: 0 0 100%;
       margin:auto auto 10px auto;
   }
+  /* Now each element takes the full width of the page (except margin, padding, and borders) */
+  .first, .second{
+    flex: 0 0 100%;
+  }
+  /* The header will now reach actual top and side edges of page */
+  .first, .header, .header h1, .header nav ul{
+    padding: 0px;
+  }
 
+  .header h1, .header nav ul{
+    margin-top: 0px;
+  }
+  /* Chagnes the alignment of flex boxes to vertical and centers the content horizontally */
   .header{
     flex-direction: column;
     align-items: center;
-    padding: 0px;
   }
-
+  /* stretches background colors to the edges and allows more space for list items */
   .header h1, .header nav{
     width:100%;
   }
-
+  /* Centers my name to page */
   .header h1{
     text-align: center;
-    margin-top: 0px;
-    padding: 0px;
   }
-
+  /* Spaces list items evenly and brings them down to a new line when screen size shrinks */
   .header nav ul{
-    padding: 0px;
     justify-content: space-evenly;
-    margin-top: 0px;
     min-width:0px;
     flex-wrap: wrap;
   }
-
-  .container-half, #core, #fuel, #space, #sun{
+  /* Gives the container that holds smaller images to take full width now (except margin, padidng, and border) */
+  .container-half{
     width:100%;
     margin-bottom: 0px;
   }
-
+  /* Sets large image to same height as other images */
   #conf{
     height: 200px;
   }
-
+  /* Changes list items to vertical and aligns them to the left */
   #contact{
     flex-direction: column;
     align-items: flex-start;
