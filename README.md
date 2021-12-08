@@ -49,12 +49,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+
 ## Badges
 N/A
 
 ## Features
-If your project has a lot of features, list them here.
 1. Scroll animation when navigation clicked
 2. Resume opens in new tab
 3. Images in work section are linked to deployed link or report in new tab
